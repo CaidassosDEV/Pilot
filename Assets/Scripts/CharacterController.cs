@@ -16,17 +16,13 @@ public class CharacterController : MonoBehaviour {
         animator = GetComponent<Animator>();
     }
 
-    private void Start()
-    {
-
-    }
-
     private void FixedUpdate()
     {
-        //animator.SetFloat("vSpeed", rigidbody2d.velocity.y);
+        HorizontalHeroMovement(Input.GetAxis("Horizontal"));
+    }
 
-        float move = Input.GetAxis("Horizontal");
-
+    private void HorizontalHeroMovement(float move)
+    {
         animator.SetFloat("speed", Mathf.Abs(move));
 
         rigidbody2d.velocity = new Vector2(move * maxSpeed, rigidbody2d.velocity.y);
