@@ -16,7 +16,7 @@ public class DamageHero : MonoBehaviour {
 
     private void TakeDamage()
     {
-        var healthBar = GameObject.Find("HealthBarImage").GetComponent("HealthBar");
-        healthBar.gameObject.SendMessage("ShowDamage", damage);
+        var healthBar = GameObject.Find("HealthBar").GetComponentsInChildren(typeof(HealthBar));
+        healthBar[0].GetComponent(typeof(HealthBar)).SendMessage("ShowDamage", damage);
     }
 }
