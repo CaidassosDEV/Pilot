@@ -226,7 +226,7 @@ TextureImporter:
       tessellationDetail: 0
     outline: []
     physicsShape: []
-  spritePackingTag: 
+  spritePackingTag: enemy
   userData: 
   assetBundleName: 
   assetBundleVariant: 
