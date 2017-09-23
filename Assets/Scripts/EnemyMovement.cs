@@ -21,5 +21,6 @@ public class EnemyMovement : MonoBehaviour {
     {
         float move = -0.1f;
         rigidbody2d.velocity = new Vector2(move * maxSpeed, rigidbody2d.velocity.y);
+        this.gameObject.transform.rotation = Quaternion.Euler(0, this.gameObject.transform.rotation.y, 0);
     }
 }
